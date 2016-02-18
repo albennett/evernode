@@ -17,6 +17,13 @@
       "mocha": true,
       "node": true,
       "es6": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": 0
+    },
+    "globals": {
+      "res": true
     }
   },
   "author": "Amy Lee Bennett <amyleeannebennett@gmail.com> (https://www.amylee.co/)",
