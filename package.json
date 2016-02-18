@@ -12,6 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/albennett/evernode.git"
   },
+  "eslintConfig": {
+    "env": {
+      "mocha": true,
+      "node": true,
+      "es6": true
+    }
+  },
   "author": "Amy Lee Bennett <amyleeannebennett@gmail.com> (https://www.amylee.co/)",
   "license": "MIT",
   "bugs": {
@@ -21,6 +28,7 @@
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
+    "jade": "^1.11.0",
     "mongoose": "^4.4.4"
   }
 }
