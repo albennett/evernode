@@ -1,6 +1,21 @@
 'use strict';
 const Note = require('../models/note');
 
+module.exports.edit = (req, res) => {
+  Note.findById(req.params.id, (err, note)=>{
+    if (err) throw err;
+    res.render('new-note', {note: note})
+  });
+};
+
+module.exports.update = (req, res) => {
+  // res.send('Update');
+  Note.findByIdAndUpdate(req.params.id, req.body, (err, note) => {
+    if (err) throw err;
+    res.redirect(`/notes/${note._id}`);
+  });
+}
+
 module.exports.index = (req, res) => {
   Note.find({}, (err, notes) => {
     if (err) throw err;
@@ -33,7 +48,7 @@ module.exports.destroy = (req, res) => {
     if (err) throw err;
   res.redirect('/notes')
   });
-
 };
+
 
 
